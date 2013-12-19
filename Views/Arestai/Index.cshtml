@@ -1,0 +1,43 @@
+﻿@model IEnumerable<hue2.Models.ArestaiModels>
+
+@{
+    ViewBag.Title = "Valdų areštai";
+}
+<div class="CSSTableGenerator">
+    <table>
+        <tr>
+            <th>
+               Valdos Kodas
+            </th>
+            <th>
+                Arešto data
+            </th>
+            <th>
+                Panaikinimo data
+            </th>
+            <th>
+                Veiksmai
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.VldId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataNuo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataIki)
+                </td>
+                <td>
+                    Panaikinti areštą
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
